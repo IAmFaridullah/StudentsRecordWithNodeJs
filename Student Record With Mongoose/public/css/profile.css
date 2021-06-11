@@ -1,0 +1,52 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 25rem;
+    height: 23rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;}
+
+.profile__pic-div > h2 {
+    margin-bottom: 1rem;
+}
+
+.profile__pic-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 75%;
+    width: 15rem;
+}
+
+.profile__pic-container {
+    width: 12rem;
+    height: 12rem;
+}
+
+.profile__pic {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.profile__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile__info .name {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}

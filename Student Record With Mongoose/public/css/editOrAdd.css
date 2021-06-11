@@ -1,0 +1,56 @@
+.body {
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    width: 400px;
+    padding: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form h2 {
+    text-align: center;
+}
+
+.button {
+    margin-top: 30px;
+    height: 35px;
+}
+
+.button:hover {
+   cursor: pointer;
+}
+
+form p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    margin-bottom: -10px;
+}
+
+form p a:hover {
+    text-decoration: none;
+}
+
+form label {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#email, #password {
+    padding: 5px;
+    height: 30px;
+}
+
+#email, #password:focus {
+    outline: none;
+}
+

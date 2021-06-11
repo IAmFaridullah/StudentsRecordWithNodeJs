@@ -1,0 +1,16 @@
+<nav>
+    <div class="logo">STUDENTS RECORD</div>
+    <div class="menu"> 
+        <ul>
+            <% if (!isAuthenticated) { %>
+                <li><a class="<% if (path == '/login') { %>active<% } %>" href="/login">Login</a></li>
+                <li><a class="<% if (path == '/signup') { %>active<% } %>" href="/signup">Signup</a></li>
+            <% } else { %>
+                <li><a class="<% if (path == '/') { %>active<% } %>" href="/">Home</a></li>
+                <li><a class="<% if (path == '/profile') { %>active<% } %>" href="/profile">Profile</a></li>
+                <li><form action="/logout" method="POST"><button type="submit">Logout</button></form></li>
+                <% } %>
+                    
+        </ul>
+    </div>
+</nav>

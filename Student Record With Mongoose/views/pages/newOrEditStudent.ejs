@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../ejsPartials/bootstrap') %>
+    <link rel="stylesheet" href="/css/editOrAdd.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title><% if (editing) { %>Edit Student<% } else { %>New Student<% } %></title>
+</head>
+<body>
+  <%- include('../ejsPartials/navbar') %>
+  <div class="body">
+    <div class="form">
+      <form action="<% if (editing) { %>/postUpdatedStudent<% } else { %>/postNewStudent<% } %>" method="POST">  
+        <h2><% if (editing) { %>Edit Student<% } else { %>Add Student<% } %></h2>
+           <input type="text" class="form-control" name="id" hidden value="<%if (editing) {%><%=student['id']%><% } %>" >
+           <label for="sname">Student Name</label>
+           <input type="text" name="name" id="email" value="<%if (editing) {%><%=student.studentName%><% } %>">
+           <label for="fname">Father Name</label>
+           <input type="text" name="fname" id="email" value="<%if (editing) {%><%=student.studentFather%><% } %>">
+           <label for="email">Email Address</label>
+           <input type="email" name="email" id="email" value="<%if (editing) {%><%=student.email%><% } %>">
+           <label for="dept">Department</label>
+           <input type="text" name="dept" id="email" value="<%if (editing) {%><%=student.department%><% } %>">
+           <input type="submit" value="<% if (editing) { %>Update Student<% } else { %>Add Student<% } %>" class="button">
+     </form>
+    </div>
+   </div>
+</body>
+</html>

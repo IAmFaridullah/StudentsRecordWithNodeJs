@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../ejsPartials/bootstrap') %>
+    <link rel="stylesheet" href="css/profile.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Login</title>
+</head>
+<body>
+  <%- include('../ejsPartials/navbar') %>
+  <div class="container">
+    <div class="profile">
+        <div class="profile__pic-div">
+            <h2>Profile Info</h2>
+            <div class="profile__pic-container">
+                <img src="<%=user.imagePath%>" alt="profile pic" class="profile__pic">
+            </div>
+        </div>
+        <div class="profile__info">
+            <h4 class="name"><%=user.fullName%></h4>
+            <h6 class="email"><%=user.email%></h6>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

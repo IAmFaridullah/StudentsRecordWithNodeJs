@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../ejsPartials/bootstrap') %>
+    <link rel="stylesheet" href="/css/signup.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>SIGN UP</title>
+</head>
+<body>
+  <%- include('../ejsPartials/navbar') %>
+  <div class="body">
+    <div class="form">
+      <form action="/signup" method="post" enctype="multipart/form-data">
+        <% if(errorMessage.length > 0) { %>   
+          <div class="error"><%=errorMessage%></div>  
+        <% } %> 
+        <% if(validationErrors.length > 0) { %>   
+          <div class="error"><%=errorMsg%></div>  
+        <% } %>
+           <h2>SIGNUP</h2>
+           <label for="fname">Full Name</label>
+           <input type="text" name="fname" id="email" class="form-control" value="<%=oldInputs.fname%>" required>
+           <label for="email">Email</label>
+           <input type="text" name="email" id="email" class="form-control <% if(validationErrors.length > 0) { %> <% if (validationErrors[0].param=='email') { %>problem <% }} %>" value="<%=oldInputs.email%>" required>
+           <label for="password">Password</label>
+           <input type="password" name="password" id="password" class="form-control <% if(validationErrors.length > 0) { %> <% if (validationErrors[0].param=='password') { %>problem <% }} %>" value="<%=oldInputs.password%>" required>
+           <label for="cpassword">Confirm Password</label>
+           <input type="password" name="cpassword" id="password" class="form-control <% if(validationErrors.length > 0) { %> <% if (validationErrors[0].param=='cpassword') { %>problem <% }} %>" value="<%=oldInputs.cpassword%>" required>
+           <label for="lname">Profile Pic</label>
+           <input type="file" name="image" id="image"  required>
+           <button type="submit" class="button btn btn-primary">SIGNUP</button>
+           <p>Already have an account? <a href="/login">Login</a></p>
+     </form>
+    </div>
+   </div>
+</body>
+</html>
